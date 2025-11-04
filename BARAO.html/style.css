@@ -1,0 +1,212 @@
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #0a0a10, #121220 80%);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #9be2ff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00e0ff;
+  text-shadow: 0 0 10px #00e0ff;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 10%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0, 255, 255, 0.1), transparent 60%);
+  animation: glow 6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes glow {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.hero-text {
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero-text h1 span {
+  color: #00e0ff;
+  text-shadow: 0 0 20px #00e0ff;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00e0ff;
+  color: #0a0a10;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  box-shadow: 0 0 15px #00e0ff;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 100px 10%;
+  margin-top: -40px;
+}
+
+.pic {
+  background: rgba(25, 25, 35, 0.95);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.pic:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.pic h1 {
+  color: #00e0ff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.pic p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.pic img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+}
+
+.pic img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .Container {
+    grid-template-columns: 1fr;
+    padding: 60px 8%;
+  }
+}
+.personal-details, .skills {
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.personal-details h2, .skills h2 {
+  color: #00e0ff;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.personal-details ul, .skills ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.personal-details li, .skills li {
+  margin-bottom: 8px;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+header img {
+  width: 180px;        
+  height: auto;
+  border-radius: 10px; 
+  display: block;
+  margin: 20px auto;   
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); 
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
